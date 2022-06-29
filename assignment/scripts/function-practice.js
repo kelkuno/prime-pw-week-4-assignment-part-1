@@ -69,15 +69,15 @@ let emptyArray = [];
 function getLast( array ) {
   for(let i=0; i<array.length; i++){
     let items = array.length;
-    console.log('for in array:', array);
+    console.log('We are in getLast array function:', array);
     if(i === items - 1){
-      console.log('This is the last value in the array:', array[i]);
-    }
-  }
-}
+      return array[i];
+    } //end of last item conditional
+  }//end of looping through the array
+} // end of getLast function
 
-console.log('We are in the getLast function', getLast(evenNumbers));
-console.log('We are in the getLast function', getLast(emptyArray));
+console.log('The last item in the evenNumbers array is:', getLast(evenNumbers));
+console.log('The last item in the emptyArray is', getLast(emptyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
