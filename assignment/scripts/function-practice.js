@@ -41,13 +41,19 @@ console.log('in multiplyThree function:', multiplyThree(1, 3, 6));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log('in the isPositive function, this is the number I am checking:', number);
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return true;
+  }else{
+    return false;
+  }  
 }
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
+
+//Dane -- I included the separate console log statment above in the function instead of in this section. Not sure if that's right.
+
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
@@ -55,9 +61,23 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+let evenNumbers = [2, 4, 6, 8, 10, 12];
+
+let emptyArray = [];
+
+function getLast( array ) {
+  for(let i=0; i<array.length; i++){
+    let items = array.length;
+    console.log('for in array:', array);
+    if(i === items - 1){
+      console.log('This is the last value in the array:', array[i]);
+    }
+  }
 }
+
+console.log('We are in the getLast function', getLast(evenNumbers));
+console.log('We are in the getLast function', getLast(emptyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
