@@ -82,9 +82,30 @@ console.log('The last item in the emptyArray is', getLast(emptyArray));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
+let otherArray = [7, 9, 12, 4];
+
 function find( value, array ){
-  
-}
+  let i =0;
+  let match = false;
+  console.log('in the find function. Checking to see if this number ( ' + value + ' ) is inside this array: ' + array);
+  while(i < array.length){
+    console.log('In the while loop:', array[i]);
+    if(value === array[i]){
+      console.log('There is a match!');
+      match = true;
+    }
+    i++;
+  }
+  if (match === true){
+    return true;
+  } else {
+    return false;
+  }
+} //end of find function
+
+console.log(find( 2, otherArray));
+console.log(find( 9, otherArray));
 
 // ----------------------
 // Stretch Goals
