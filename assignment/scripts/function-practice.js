@@ -112,7 +112,31 @@ console.log(find( 9, otherArray));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+let testString = "Kelsey";
+//testString.split();
+//console.log(testString.split(''));
 function isFirstLetter(letter, string) {
+  let i = 0;
+  let letterMatch = false;
+  let newStringArray = string.split('');
+  console.log('This is your string, broken into letters:', newStringArray);
+
+  while (i < newStringArray.length){
+    if (letter === newStringArray[0]){
+      letterMatch = true;
+    } else {
+      letterMatch = false;
+    }
+    i++;
+  }//end of loop
+
+  if(letterMatch === true){
+    console.log("yes, " + letter + " is the first letter of the string.");
+    return true;
+  } else {
+    console.log("no, " + letter + " is not the first letter of the string.");
+    return false;
+  }
 
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
