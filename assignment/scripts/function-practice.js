@@ -187,3 +187,32 @@ console.log('This is the result of the positiveArray function:', positiveArray(a
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+let exampleString = 'javascript is cool';
+
+function hackerSpeak (string) {
+  let i = 0;
+  let brokenString = string.split("");
+  console.log(brokenString);
+
+  while (i < brokenString.length){
+    if(brokenString[i]=== 'e'){
+      brokenString[i] = '3';
+    } else if (brokenString[i]=== 'a'){
+      brokenString[i] = '4';
+    } else if (brokenString[i] === 'o'){
+      brokenString[i] = '0';
+    } else if (brokenString[i]=== 's'){
+      brokenString[i] = '5';
+    } // end of conditional
+    i++;
+  }//end of loop
+  
+  let newString = brokenString.join("");
+  return newString;
+}//end of hackerSpeak function.
+
+hackerSpeak(exampleString);
+console.log('here is the string hacker style:', hackerSpeak(exampleString));
+
+//This was so fun! first time trying out edabit. My problem was to Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string. i.e. replace 'e' with '3', 'a' with '4', 'o' with '0' and 's' with '5'. 
