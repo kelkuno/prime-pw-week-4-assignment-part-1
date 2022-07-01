@@ -161,7 +161,28 @@ console.log('Here is the sum to the array:', sumAll(someArray));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+let array1 = [2, 0, -5, 75, -20];
+let array2 = [-2, -3, -5];
 
+function positiveArray ( array ){
+  let returnedArray = [];
+  let i = 0;
+  console.log('we are in positiveArray', array);
+  while(i < array.length){
+    if(array[i]>0){
+      returnedArray.push(array[i]);
+      console.log(array[i] + ' has been added to new array.');
+    } // end of conditional
+    i++;
+  }//end of loop
+  return returnedArray;
+}//end of positiveArray function.
+
+positiveArray(array1);
+console.log('This is the result of the positiveArray function:', positiveArray(array1));
+
+positiveArray(array2);
+console.log('This is the result of the positiveArray function:', positiveArray(array2));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
